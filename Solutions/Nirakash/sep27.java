@@ -1,5 +1,6 @@
 package Solutions.Nirakash;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -29,7 +30,62 @@ public class sep27 {
         4. Repeat step 1-3 until either l1 or l2 !isEmpty()
         
         */
+        int x=0,y=0;
+        int index_x = 0, index_y=0;
 
+        int l1Size = l1.size();
+
+        int l2Size = l2.size();
+
+        // x=l1.get(index_x);
+        // y=l2.get(index_y);
+        
+
+        while (l1Size > 0 && l2Size > 0) {
+
+            x=l1.get(index_x);
+                y=l2.get(index_y);
+
+            if (x == y) {
+                //result.add(index_x, x);
+                result.add(x);
+                //result.add(index_y, y);
+                result.add(y);
+                index_x++;
+                index_y++;
+                l1Size--;
+                l2Size--;
+
+            } else if (x < y) {
+                //result.add(index_x, x);
+                result.add(x);
+                index_x++;
+                l1Size--;
+            } else {
+                //result.add(index_x, x);
+                result.add(y);
+                index_y++;
+                l2Size--;
+            }
+        } // end while
+        
+        while(l1Size > 0){
+            result.add(x);
+            l1Size--;
+            index_x++;
+        }
+
+        while(l2Size > 0){
+            result.add(y);
+            l2Size--;
+            index_y++;
+        }
+
+      Iterator it = result.iterator();
+
+      while(it.hasNext()){
+        System.out.println(it.next());
+      }
         
     }
     
