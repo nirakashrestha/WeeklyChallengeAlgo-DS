@@ -16,7 +16,7 @@ public class sep27 {
         LinkedList<Integer> result = new LinkedList<Integer>();
 
         l1.add(1);  l1.add(2);  l1.add(4);
-        l2.add(1);  l2.add(3);  l2.add(4); //l2.add(6); l2.add(8);
+        l2.add(1);  l2.add(3);  l2.add(4); l2.add(6); l2.add(8);
 
         /*
         Thought process -        
