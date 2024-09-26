@@ -16,7 +16,7 @@ public class sep27 {
         LinkedList<Integer> result = new LinkedList<Integer>();
 
         l1.add(1);  l1.add(2);  l1.add(4);
-        l2.add(1);  l2.add(3);  l2.add(4);
+        l2.add(1);  l2.add(3);  l2.add(4); //l2.add(6); l2.add(8);
 
         /*
         Thought process -        
@@ -70,13 +70,13 @@ public class sep27 {
         } // end while
         
         while(l1Size > 0){
-            result.add(x);
+            result.add(l1.get(index_x));
             l1Size--;
             index_x++;
         }
 
         while(l2Size > 0){
-            result.add(y);
+            result.add(l2.get(index_y));
             l2Size--;
             index_y++;
         }
